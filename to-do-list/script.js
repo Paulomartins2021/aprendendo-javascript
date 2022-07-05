@@ -24,10 +24,11 @@ function completarTarefa (tarefaLI){
      tarefaLI.remove();
      const listaTarefasCompletas = document.getElementById('tarefas-completas');
      listaTarefasCompletas.appendChild(tarefaLI);
-
+     tarefaLI.style.textDecoration = 'line-through'
 }
 function reverterTarefa (tarefaLI){
     tarefaLI.remove()
     const listaTarefasIncompletas = document.getElementById('tarefas-incompletas')
     listaTarefasIncompletas.appendChild(tarefaLI)
+    tarefaLI.style.textDecoration = 'none'
 }
