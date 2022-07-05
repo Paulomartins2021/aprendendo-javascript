@@ -6,6 +6,9 @@ function addNovaTarefa(){
     checkbox.type = 'checkbox';
     checkbox.classList.add('tarefa-checkbox');
     checkbox.addEventListener('change', function(){
+        console.log(this.checked)
+        console.log(this.parentNode)
+        console.log(this)
         if( this.checked){
             completarTarefa(this.parentNode)
         }
