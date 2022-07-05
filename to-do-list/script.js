@@ -10,7 +10,7 @@ function addNovaTarefa(){
     novaTarefaLi.innerHTML += novaTarefaNome;
     const listaTarefasIncompletas =document.getElementById('tarefas-incompletas');
     listaTarefasIncompletas.appendChild(novaTarefaLi);
-    checkbox.addEventListener('change', function(){
+    checkbox.addEventListener('onChange', function(){
         console.log(this.checked)
         console.log(this.parentNode)
         console.log(this)
