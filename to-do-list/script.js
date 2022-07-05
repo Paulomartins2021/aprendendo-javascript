@@ -5,15 +5,7 @@ function addNovaTarefa(){
     const checkbox = document.createElement ('input');
     checkbox.type = 'checkbox';
     checkbox.classList.add('tarefa-checkbox');
-    
-    novaTarefaLi.appendChild(checkbox);
-    novaTarefaLi.innerHTML += novaTarefaNome;
-    const listaTarefasIncompletas =document.getElementById('tarefas-incompletas');
-    listaTarefasIncompletas.appendChild(novaTarefaLi);
-    checkbox.addEventListener('click', function(){
-        console.log(this.checked)
-        console.log(this.parentNode)
-        console.log(this)
+    checkbox.addEventListener('change', function(){
         if( this.checked){
             completarTarefa(this.parentNode)
         }
@@ -21,6 +13,12 @@ function addNovaTarefa(){
             reverterTarefa(this.parentNode)
         }
     })
+    novaTarefaLi.appendChild(checkbox);
+    const span = document.createElement('span')
+    span.innerHTML = novaTarefaNome
+    novaTarefaLi.appendChild(span)
+    const listaTarefasIncompletas =document.getElementById('tarefas-incompletas');
+    listaTarefasIncompletas.appendChild(novaTarefaLi);
 }
 function completarTarefa (tarefaLI){
      tarefaLI.remove();
