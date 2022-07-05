@@ -5,12 +5,12 @@ function addNovaTarefa(){
     const checkbox = document.createElement ('input');
     checkbox.type = 'checkbox';
     checkbox.classList.add('tarefa-checkbox');
-    ckeckbox.addEventListener('change', function(){
+    checkbox.addEventListener('change', function(){
         if( this.checked){
-            completarTarefa(this.parenteNode)
+            completarTarefa(this.parentNode)
         }
         else {
-            reverterTarefa(this.parenteNode)
+            reverterTarefa(this.parentNode)
         }
     })
     novaTarefaLi.appendChild(checkbox);
