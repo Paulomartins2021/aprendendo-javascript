@@ -94,3 +94,7 @@ function calculadora(){
     }
 }
 calculadora();
+
+// funcoes = https://developer.mozila.org/pt-BR/docs/Web/JavaScript/Guide?functions
+// Number = htpps://developer.mozila.org/pt-BR/docs/Web/JavaScript/Reference/Global Objects/Number
+// Window.prompt = htpps://developer.mozila.org/pt-BR/docs/Web/API/Window/prompt
